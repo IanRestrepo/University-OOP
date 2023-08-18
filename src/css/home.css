@@ -19,4 +19,13 @@ body {
 
 .greetingUser {
     text-align: right;
+    font-size: 35px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #ffffff;
 }

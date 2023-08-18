@@ -1,13 +1,22 @@
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-=======
+
+:root {
+    --bg-color-Dark: #161717;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: black;
-    margin: 20px 20px 20px 20px;
+    color: white;
+    background-color: var(--bg-color-Dark);
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .greetingUser {
     text-align: right;
-    color: rgb(255, 255, 255);
 }
->>>>>>> f46b0d7ff4841ddf78f6b998a2ee970c0d83c6c7

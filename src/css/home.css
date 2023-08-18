@@ -1,0 +1,9 @@
+body {
+    background-color: black;
+    margin: 20px 20px 20px 20px;
+}
+
+.greetingUser {
+    text-align: right;
+    color: rgb(255, 255, 255);
+}

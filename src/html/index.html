@@ -14,17 +14,19 @@
             </pre>
         </header>
         <div class="login_container">
-            <h1 id="Title">Good Night</h1>
+            <h1 id="Title">Good <span class="re-marked">Night</span> .</h1>
+            <h3 id="loginTitle">Sign-Up</h3>
             <div class="login">
         
 
                 <form class="loginForm">
+
                     <input type="text" name="userName" id="userNameInp" placeholder="@userName">
                         <br>
                     <input type="password" name="password" id="passwordInp" placeholder="Password">
                         <br>
-                        <p>Have no account yet? <span class="re-marked"> <a href="#">Create one</a></span></p>
-                    <button class="button"><strong>LOGIN</strong></button>
+                        <p>Already have an account? <span class="re-marked"> <a href="#">LogIn</a></span></p>
+                    <button class="button" id="submitInfo"><strong>SIGNUP</strong></button>
                     
                     <p>Request <span class="re-marked"><a href="#">Help</a></span></p>
                 </form>
@@ -32,5 +34,6 @@
 
         </div>
 
+        <script src="/src/js/Auth.js"></script>
     </body>
 </html>

@@ -31,7 +31,12 @@ header {
 h1{
     font-size: 40px;
     padding: 40px;
-    margin-bottom: 220px;
+    margin-bottom: 120px;
+}
+
+ #loginTitle{
+    font-size: 30px;
+    text-align: center;
 }
 
 
@@ -39,6 +44,10 @@ h1{
  
     padding: 50px;
     margin: 0 auto;
+}
+
+.login_container h3 {
+    font-size: 30px;
 }
 
  .loginForm input {
@@ -54,11 +63,16 @@ h1{
     display: grid;
     place-content: center;
     place-items: center;
+
 }
 
 
 .re-marked a {
     text-decoration: none;
+    color: var(--main-color);
+}
+
+.re-marked {
     color: var(--main-color);
 }
 

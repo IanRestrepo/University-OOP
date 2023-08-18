@@ -24,7 +24,7 @@ body {
 }
 
 header {
-    background-color: black;
+    background-color: #141414;
     height: 100vh;
 }
 
@@ -47,6 +47,7 @@ h1{
     border: 1px solid var(--bg-input-border-color);
     border-radius: 5px;
     font-size: 25px;
+    color: var(--bg-input-border-color);
 }
 
 .loginForm {
@@ -70,5 +71,6 @@ h1{
     width: 335px;
     border-radius: 5px;
     color: #0066FE;
+    cursor: pointer;
 }
 

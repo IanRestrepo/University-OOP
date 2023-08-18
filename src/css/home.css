@@ -28,4 +28,6 @@ body {
 
 body::-webkit-scrollbar-thumb {
     background: #ffffff;
+    color: #fffdfd;
+    border-radius: 15px;
 }

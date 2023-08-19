@@ -1,33 +1,37 @@
 // === Authentication Section ===//
 
+
 const userNameForm = document.getElementById('userNameInp');
+const userNameFormLogin = document.getElementById('userNameInpLogin');
 const passwordForm = document.getElementById('passwordInp');
+const passwordFormLogin = document.getElementById('passwordInpLogin');
 const signUpForm = document.getElementById('submitInfo');
+const signUpFormLogin = document.getElementById('submitInfoLogin');
 const userNameToShow = document.getElementById('userNameToShow');
 const secretThingChange = document.getElementById('Title');
 const userNameCode = document.getElementById('UserNameCode');
-const passwordCode = document.getElementById('PasswordCode')
+const passwordCode = document.getElementById('PasswordCode');
 let secretKey = '-'
 
 
 document.addEventListener('DOMContentLoaded', () => {
     const userNameToShowElement = document.getElementById('userNameToShow');
     const storedUserName = localStorage.getItem('UserName');
-  
+
     if (storedUserName) {
-      userNameToShowElement.innerHTML = `${storedUserName}`;
-    } 
-  });
-  
+        userNameToShowElement.innerHTML = `${storedUserName}`;
+    }
+});
+
 
 userNameForm.addEventListener('input', () => {
 
     const usernameValue = userNameForm.value;
 
     if (usernameValue.length > 20) {
-      userNameForm.value = usernameValue.slice(0, 20);
+        userNameForm.value = usernameValue.slice(0, 20);
     }
-  
+
     const sanitizedUsername = usernameValue.replace(/[^\w]/g, '');
     userNameForm.value = sanitizedUsername;
 
@@ -44,9 +48,13 @@ userNameForm.addEventListener('input', () => {
 
 });
 
-passwordForm.addEventListener('input', ()=> {
+userNameFormLogin.addEventListener('input', () => {
+    const userNameLoginValue = userNameFormLogin.value; // You get HERE
+})
 
-    if (userNameForm.value == '') {
+passwordForm.addEventListener('input', () => {
+
+    if (passwordForm.value == '') {
         passwordCode.classList.remove('Brown');
         passwordCode.textContent = 'Password'
     }
@@ -62,27 +70,40 @@ passwordForm.addEventListener('input', ()=> {
   
 })
 
-signUpForm.addEventListener('click', () => {
+signUpForm.addEventListener('click', (event) => {
     const storedUserName = localStorage.getItem('UserName');
-    const storePassword = localStorage.getItem('Password')
+    const storedPassword = localStorage.getItem('Password')
 
-    if ( !storedUserName & !storePassword ) {
+    if (!storedUserName && !storedPassword) { // Cambio aquí: && en lugar de &
         console.warn('Data Saved Successfully!')
         localStorage.setItem('UserName', userNameForm.value)
         localStorage.setItem('Password', passwordForm.value)
-        
-        event.preventDefault();
+
+        event.preventDefault(); 
         window.location.href = 'home.html';
     } else {
         event.preventDefault();
-        console.error('You already have an account!')
-    }
 
-})
+        Toastify({
+            text: "You Already have an account!",
+            duration: 3000,
+            newWindow: true,
+            close: true,
+            gravity: "bottom",
+            position: "right",
+            stopOnFocus: true,
+            style: {
+                background: "#161717",
+            },
+            onClick: function () { }
+        }).showToast();
+    }
+});
+
 
 document.addEventListener('keydown', (event) => {
     if (event.key === secretKey) {
-      const secretThingChange = document.getElementById('Title');
-      secretThingChange.textContent = 'Shhh this is secret!';
+        const secretThingChange = document.getElementById('Title');
+        secretThingChange.textContent = 'Shhh this is secret!';
     }
-  });
+});

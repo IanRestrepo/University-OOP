@@ -88,3 +88,49 @@ h1{
     cursor: pointer;
 }
 
+.codeSection {
+    padding: 50px;
+    padding-top: 45px;
+    font-size: 20px;
+}
+
+.CodeBlue {
+    color: #306CBE;
+
+}
+
+.ClassColor {
+    color: #4EC9B0;
+}
+
+.Yellow {
+    color: #FFD700;
+}
+
+.Pink {
+    color: #DA70C0;
+}
+
+.NewBlue {
+    color: #7FCEE7;
+}
+
+.NewYellow {
+    color: #DAD18C;
+}
+
+.OldBlue {
+    color: #729DB4;
+}
+
+.NewBlue2 {
+    color: #2BA2FF;
+}
+
+.Brown {
+    color: #A9806F;
+}
+
+.NewPink {
+    color: #C586C0;
+}

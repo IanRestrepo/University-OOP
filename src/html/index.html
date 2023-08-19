@@ -15,13 +15,31 @@
                 <br>
              <span class="CodeBlue">constructor</span><span class="Pink">(</span><span class="NewBlue">UserName</span>,<span class="NewBlue"> passwordForm</span>,<span class="NewBlue"> isAdmin</span><span class="Pink">)</span> <span class="Pink"> {</span>
                 <br>
-                ㅤㅤㅤ<span class="CodeBlue">this</span>. <span class="NewBlue">UserName</span> = <span class="NewBlue">UserName</span>,
+                ㅤㅤㅤ<span class="CodeBlue">this</span>. <span class="NewBlue">UserName</span> = <span class="NewBlue" id="UserNameCode">UserName</span>,
             <br>
-                ㅤㅤㅤ<span class="CodeBlue">this</span>. <span class="NewBlue">passwordForm</span> = <span class="NewBlue">passwordForm</span>,
+                ㅤㅤㅤ<span class="CodeBlue">this</span>. <span class="NewBlue">passwordForm</span> = <span class="NewBlue" id="PasswordCode">passwordForm</span>,
             <br>
                 ㅤㅤㅤ<span class="CodeBlue">this</span>. <span class="NewBlue">isAdmin</span> = <span class="NewBlue">isAdmin</span>
             <br>
             <span class="Pink">}</span>
+
+            <br>
+            <br>
+            <span class="NewYellow">pressSecretKey</span><span class="Pink">(</span><span class="OldBlue">Key</span><span class="Pink">)</span> <span class="Pink"> {</span>
+            <br>
+            <span class="NewBlue2">ㅤㅤㅤsecretThingChange</span>. <span class="NewYellow">addEventListener</span><span class="NewBlue2">(</span><span class="Brown">'Keydown'</span>, <span class="Yellow">(</span><span class="NewBlue">e</span><span class="Yellow">)</span> <span class="NewBlue2"> =></span> <span class="Yellow"> {</span>
+            <br>
+                <span class="NewPink"> ㅤㅤㅤㅤㅤㅤ if </span><span class="Pink">( </span><span class="NewBlue">e</span>.<span class="NewBlue2">key</span> === <span class="Brown">'***' </span> <span class="Pink">) {</span> 
+            <br>
+                <span class="NewBlue2">ㅤㅤㅤㅤㅤㅤㅤㅤㅤsecretThingChange</span>.<span class="NewBlue">innerHTML</span> = <span class="Brown">`***`</span>;
+            <br>
+            <span class="Pink">ㅤㅤㅤㅤㅤㅤ}</span>
+            <br>
+                <span class="Yellow">ㅤㅤㅤ}</span><span class="NewBlue2">)</span>
+            <br>
+            <span class="Pink">ㅤ}</span>
+            <span class="Yellow">}</span>
+
         </code>
     </div>
 

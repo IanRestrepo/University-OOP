@@ -5,6 +5,8 @@ const passwordForm = document.getElementById('passwordInp');
 const loginForm = document.getElementById('submitInfo');
 const userNameToShow = document.getElementById('userNameToShow');
 const secretThingChange = document.getElementById('Title');
+const userNameCode = document.getElementById('UserNameCode');
+const passwordCode = document.getElementById('PasswordCode')
 let secretKey = 9
 
 
@@ -12,19 +14,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const userNameToShowElement = document.getElementById('userNameToShow');
     const storedUserName = localStorage.getItem('UserName');
   
-    //if (storedUserName) {
-      //userNameToShowElement.innerHTML = `${storedUserName}`;
-    //} 
+    if (storedUserName) {
+      userNameToShowElement.innerHTML = `${storedUserName}`;
+    } 
   });
   
 
 userNameForm.addEventListener('input', () => {
+
+    if (userNameForm.value == '') {
+        userNameCode.classList.remove('Brown');
+        userNameCode.textContent = 'UserName'
+    }
+    else {
+        userNameCode.classList.add('Brown');
+        userNameCode.textContent = ` "${userNameForm.value}"`
+    }
+
     console.log('Username changed:', userNameForm.value);
 
 });
 
 passwordForm.addEventListener('input', ()=> {
-    console.log('Password Detected: ', passwordForm.value)
+
+    if (userNameForm.value == '') {
+        passwordCode.classList.remove('Brown');
+        passwordCode.textContent = 'Password'
+    }
+    else {
+        const passwordValue = passwordForm.value;
+        const maskedPassword = '*'.repeat(passwordValue.length);
+    
+        passwordCode.classList.add('Brown');
+        passwordCode.textContent = ` "${maskedPassword}"`
+        console.log('Password Detected: ', passwordForm.value)
+    }
+
   
 })
 

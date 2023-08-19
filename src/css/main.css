@@ -89,30 +89,47 @@ h1{
 }
 
 .codeSection {
-    padding: 20px;
+    padding: 50px;
+    font-size: 20px;
 }
 
 .CodeBlue {
     color: #306CBE;
-    font-size: 20px;
+
 }
 
 .ClassColor {
     color: #4EC9B0;
-    font-size: 20px;
 }
 
 .Yellow {
     color: #FFD700;
-    font-size: 20px;
 }
 
 .Pink {
     color: #DA70C0;
-    font-size: 20px;
 }
 
 .NewBlue {
     color: #7FCEE7;
-    font-size: 20px;
+}
+
+.NewYellow {
+    color: #DAD18C;
+}
+
+.OldBlue {
+    color: #729DB4;
+}
+
+.NewBlue2 {
+    color: #2BA2FF;
+}
+
+.Brown {
+    color: #A9806F;
+}
+
+.NewPink {
+    color: #C586C0;
 }

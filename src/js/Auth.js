@@ -2,12 +2,12 @@
 
 const userNameForm = document.getElementById('userNameInp');
 const passwordForm = document.getElementById('passwordInp');
-const loginForm = document.getElementById('submitInfo');
+const signUpForm = document.getElementById('submitInfo');
 const userNameToShow = document.getElementById('userNameToShow');
 const secretThingChange = document.getElementById('Title');
 const userNameCode = document.getElementById('UserNameCode');
 const passwordCode = document.getElementById('PasswordCode')
-let secretKey = 9
+let secretKey = '-'
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,6 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
 userNameForm.addEventListener('input', () => {
+
+    const usernameValue = userNameForm.value;
+
+    if (usernameValue.length > 20) {
+      userNameForm.value = usernameValue.slice(0, 20);
+    }
+  
+    const sanitizedUsername = usernameValue.replace(/[^\w]/g, '');
+    userNameForm.value = sanitizedUsername;
 
     if (userNameForm.value == '') {
         userNameCode.classList.remove('Brown');
@@ -53,34 +62,27 @@ passwordForm.addEventListener('input', ()=> {
   
 })
 
-loginForm.addEventListener('click', () => {
-    console.warn('Data Saved Successfully!')
-    localStorage.setItem('UserName', userNameForm.value)
-    localStorage.setItem('Password', passwordForm.value)
-    
-    event.preventDefault();
-    window.location.href = 'home.html';
+signUpForm.addEventListener('click', () => {
+    const storedUserName = localStorage.getItem('UserName');
+    const storePassword = localStorage.getItem('Password')
+
+    if ( !storedUserName & !storePassword ) {
+        console.warn('Data Saved Successfully!')
+        localStorage.setItem('UserName', userNameForm.value)
+        localStorage.setItem('Password', passwordForm.value)
+        
+        event.preventDefault();
+        window.location.href = 'home.html';
+    } else {
+        event.preventDefault();
+        console.error('You already have an account!')
+    }
+
 })
 
 document.addEventListener('keydown', (event) => {
-    if (event.key === '9') {
+    if (event.key === secretKey) {
       const secretThingChange = document.getElementById('Title');
-      secretThingChange.textContent = 'You Did it';
+      secretThingChange.textContent = 'Shhh this is secret!';
     }
   });
-
-class User {
-    constructor(UserName, passwordForm, isAdmin) {
-        this.UserName = UserName,
-        this.passwordForm = passwordForm,
-        this.isAdmin = isAdmin
-    }
-
-    pressSecretKey(Key) {
-        secretThingChange.addEventListener('keydown', (e) => {
-            if (e.key === '***' ) {
-                secretThingChange.innerHTML = `***`;
-            }
-        })
-    }
-}

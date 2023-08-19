@@ -48,9 +48,7 @@ userNameForm.addEventListener('input', () => {
 
 });
 
-userNameFormLogin.addEventListener('input', () => {
-    const userNameLoginValue = userNameFormLogin.value; // You get HERE
-})
+
 
 passwordForm.addEventListener('input', () => {
 

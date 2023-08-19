@@ -46,18 +46,18 @@ body {
 .sectionTitle{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 5px;
 }
 
-.svg1{
-    margin: 198px 0px 0px 120px;
-}
 
 .firstTitle{
-    font-size: 120px;
+    font-size: 75px;
     font-weight:bolder;
     font-family: 'Roboto Mono', monospace;
-    padding: 0px 0px 0px 0px;
+}
+
+#image {
+    padding-left: 220px;
 }
 
 .secondTitle{
@@ -75,8 +75,8 @@ body {
 .explicationPOO{
     color:white;
     font-size: 25px;
-    padding-left: 580px;
-    padding-right: 70px;
+    margin: 0 auto;
+    max-width: 1250px;
     line-height: 50px;
 }
 

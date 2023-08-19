@@ -1,3 +1,5 @@
+
+
 // === Authentication Section ===//
 
 
@@ -14,14 +16,7 @@ const passwordCode = document.getElementById('PasswordCode');
 let secretKey = '-'
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const userNameToShowElement = document.getElementById('userNameToShow');
-    const storedUserName = localStorage.getItem('UserName');
 
-    if (storedUserName) {
-        userNameToShowElement.innerHTML = `${storedUserName}`;
-    }
-});
 
 
 userNameForm.addEventListener('input', () => {
@@ -99,9 +94,3 @@ signUpForm.addEventListener('click', (event) => {
 });
 
 
-document.addEventListener('keydown', (event) => {
-    if (event.key === secretKey) {
-        const secretThingChange = document.getElementById('Title');
-        secretThingChange.textContent = 'Shhh this is secret!';
-    }
-});

@@ -29,7 +29,16 @@ header {
     color: var(--main-color);
 }
 
-#Principal_Title{
+#Principal_Part{
     display: grid;
-    column-gap: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid red;
+}
+
+#title_container{
+    display: flex;
+    align-items: center;
+    place-items: center;
+    max-width: 700px;
+    font-size: 35px;
 }

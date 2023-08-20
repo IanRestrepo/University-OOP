@@ -18,11 +18,10 @@ body {
 }
 
 header {
-    font-size: 10px;
+    font-size: 12px;
     display: grid;
     place-content: center;
     place-items: center;
-    grid-template-columns: 1fr 1fr;
     padding: 20px;
 }
 
@@ -30,6 +29,7 @@ header {
     color: var(--main-color);
 }
 
-button #logout-Button {
-
+#Principal_Title{
+    display: grid;
+    column-gap: 1fr 1fr;
 }

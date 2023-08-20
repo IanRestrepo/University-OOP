@@ -1,58 +1,3 @@
- const codeIrlName = document.getElementById('UserNameCode');
- const codeIrlPassword = document.getElementById('PasswordCode');
-
- // SignUp Form
-
- const newUserName = document.getElementById('userNameInp');
- const newPassword = document.getElementById('passwordInp');
-
- newUserName.addEventListener('input', (e) => {
-    
-    if (newUserName.value === '') {
-        codeIrlName.classList.remove('Brown');
-        codeIrlName.textContent = 'UserName';
-    } else {
-        codeIrlName.classList.add('Brown');
-        codeIrlName.textContent =  `"${newUserName.value}"`;
-    }
-
- });
-
- newPassword.addEventListener('input', (e) => {
-    if (newPassword.value === '') {
-        codeIrlPassword.classList.remove('Brown');
-        codeIrlPassword.textContent = 'Password';
-    } else {
-        const passwordValue = newPassword.value
-        const maskedPassword = '*'.repeat(passwordValue.length);
-
-        codeIrlPassword.classList.add('Brown');
-        codeIrlPassword.textContent = `"${maskedPassword}"`;
-        
-    }
- })
-
- // Login Form
-
- const userName = document.getElementById('userNameInpLogin');
- const password = document.getElementById('passwordInpLogin');
-
-
- 
- document.addEventListener('DOMContentLoaded', () => {
-    const userNameToShowElement = document.getElementById('userNameToShow');
-    const loggedInUserName = localStorage.getItem('loggedInUser');
-
-    if (loggedInUserName) {
-        const greetingElement = document.getElementById('GoodW');
-        const greeting = getGreeting();
-        greetingElement.textContent = `${greeting}, ${loggedInUserName}!`;
-        userNameToShowElement.textContent = `${loggedInUserName}!`;
-    }
-});
-
-
-
 class User {
     constructor(Name, Password) {
         this.Name = Name,
@@ -181,22 +126,5 @@ function loginUser() {
 
     }
 
-}
-
-function getGreeting() {
-    const now = new Date();
-    const hour = now.getHours();
-
-    let greeting = "";
-
-    if (hour >= 6 && hour < 12) {
-        greeting = "Good morning!";
-    } else if (hour >= 12 && hour < 18) {
-        greeting = "Good afternoon!";
-    } else {
-        greeting = "Good night!";
-    }
-
-    return greeting;
 }
 

@@ -1,12 +1,12 @@
+function isUserAuthenticated() {
+    const loggedInUser = localStorage.getItem('loggedInUser');
+    return loggedInUser !== null;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-
-    const savedUsers = JSON.parse(localStorage.getItem('users')) || [];
-
-    if (!savedUsers) {
-        window.location.href = 'index.html';
+    if (!isUserAuthenticated()) {
+        window.location.href = '/src/html/noAuth.html';
     } else {
-        
-
+        return;
     }
-
 });

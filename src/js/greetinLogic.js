@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const userNameToShowElement = document.getElementById('userNameToShow');
+    const userNameToShowElement = document.getElementById('Header_Title-Username');
     const loggedInUserName = localStorage.getItem('loggedInUser');
 
     if (loggedInUserName) {

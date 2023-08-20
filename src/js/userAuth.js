@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+ document.addEventListener('DOMContentLoaded', () => {
     const userNameToShowElement = document.getElementById('userNameToShow');
     const loggedInUserName = localStorage.getItem('loggedInUser');
 

@@ -1,3 +1,31 @@
+ const codeIrlName = document.getElementById('UserNameCode');
+ const codeIrlPassword = document.getElementById('PasswordCode');
+
+ // SignUp Form
+
+ const newUserName = document.getElementById('userNameInp');
+ const newPassword = document.getElementById('passwordInp');
+
+ newUserName.addEventListener('input', (e) => {
+    console.log(newUserName.value)
+    
+    if (newUserName.value === '') {
+        codeIrlName.classList.remove('Brown');
+        codeIrlName.textContent = 'UserName';
+    } else {
+        codeIrlName.classList.add('Brown');
+        codeIrlName.textContent =  `"${newUserName.value}"`;
+    }
+
+ })
+
+ // Login Form
+
+ const userName = document.getElementById('userNameInpLogin');
+ const password = document.getElementById('passwordInpLogin');
+
+
+ 
  document.addEventListener('DOMContentLoaded', () => {
     const userNameToShowElement = document.getElementById('userNameToShow');
     const loggedInUserName = localStorage.getItem('loggedInUser');

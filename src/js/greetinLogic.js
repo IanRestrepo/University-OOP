@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loggedInUserName = localStorage.getItem('loggedInUser');
 
     if (loggedInUserName) {
-        const greetingElement = document.getElementById('GoodW');
+        const greetingElement = document.getElementById('Header_Title');
         const greeting = getGreeting();
         greetingElement.textContent = `${greeting}, ${loggedInUserName}!`;
         userNameToShowElement.textContent = `${loggedInUserName}!`;

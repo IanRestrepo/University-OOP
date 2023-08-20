@@ -29,9 +29,9 @@ function registerUser() {
                 background: "#161717",
             },
         }).showToast();
-    } else if (newUserName.value.length > 12  || newPassword.value.length < 5 || newUserName.value.length < 3) {
+    } else if (newUserName.value.length > 20  || newPassword.value.length < 5 || newUserName.value.length < 3) {
         Toastify({
-            text: "Your username and password must be between 5 and 12 characters!",
+            text: "Your username and password must be between 5 and 20 characters!",
             duration: 3000,
             newWindow: false,
             close: true,

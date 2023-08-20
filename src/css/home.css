@@ -32,7 +32,6 @@ header {
 #Principal_Part{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 1px solid red;
 }
 
 #title_container{
@@ -41,4 +40,23 @@ header {
     place-items: center;
     max-width: 700px;
     font-size: 35px;
+}
+
+#img_container{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+#explicaton{
+    max-width: 821px;
+    margin: 0 auto;
+    padding: 80px 0;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.re_market{
+    color: var(--main-color);
+    font-weight: 800;
 }

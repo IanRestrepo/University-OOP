@@ -7,7 +7,6 @@
  const newPassword = document.getElementById('passwordInp');
 
  newUserName.addEventListener('input', (e) => {
-    console.log(newUserName.value)
     
     if (newUserName.value === '') {
         codeIrlName.classList.remove('Brown');
@@ -17,6 +16,20 @@
         codeIrlName.textContent =  `"${newUserName.value}"`;
     }
 
+ });
+
+ newPassword.addEventListener('input', (e) => {
+    if (newPassword.value === '') {
+        codeIrlPassword.classList.remove('Brown');
+        codeIrlPassword.textContent = 'Password';
+    } else {
+        const passwordValue = newPassword.value
+        const maskedPassword = '*'.repeat(passwordValue.length);
+
+        codeIrlPassword.classList.add('Brown');
+        codeIrlPassword.textContent = `"${maskedPassword}"`;
+        
+    }
  })
 
  // Login Form

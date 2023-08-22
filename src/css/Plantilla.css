@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --bg-color-Dark: #161717;
+    --bg-input-color: #131313;
+    --bg-input-border-color: #5D5D5D;
+    --main-color: #0066FE;
+    --main-color-fill: #001F3D;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-color-Dark);
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    border: 1px solid red;
+    font-size: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+#Emoji_Container {
+    border: 1px solid #f700ff;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: grid;
+    place-content: center;
+    padding: 50px;
+    background: #3b003d;
+    font-size: 70px;
+}
+
+#Title_Container {
+    color: white;
+    font-weight: 600;
+    max-width: 200px;
+}

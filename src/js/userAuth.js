@@ -127,3 +127,12 @@ function loginUser() {
     }
 
 }
+
+function setRol() {
+    const roles = {
+        "SuperAdmin": 0,
+        "Admin": 1,
+        "Moderator": 2,
+        "Basic-User":3
+    }
+}

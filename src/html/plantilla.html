@@ -1,15 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/css/Plantilla.css">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.2.0/styles/atom-one-dark.min.css">
 </head>
-    <body>
-        <header>
-            <div id="Emoji_Container">📦</div>
-            <div id="Title_Container">Titulo de Campo</div>
-        </header>
-    </body>
+
+<body>
+    <header>
+        <div id="Image_Container">
+            <img src="/src/media/Template.png" alt="Template Image">
+        </div>
+        <div id="Title_Container">Plantilla Programación Orientada a Objetos</div>
+    </header>
+
+    <main>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur quisquam molestias harum distinctio nulla
+        repellendus officiis esse praesentium, voluptas sint fugit voluptatibus facilis corrupti eos. Consequuntur,
+        laudantium non? Animi nemo aliquid corporis optio itaque culpa velit, labore, blanditiis, natus facere qui
+        facilis! Quia sit libero dolores possimus enim sapiente, mollitia minus magni, repellat exercitationem labore,
+        explicabo facilis corrupti. Quisquam deserunt quae enim placeat magnam soluta nostrum alias temporibus ea
+        voluptates natus distinctio sit, commodi beatae voluptatem atque magni doloribus sed ut nam. Illum facilis qui
+        cum omnis reiciendis, illo officiis amet quis, quia, sit neque. Minus quas voluptates eaque ex?
+
+        <div class="code-container" id="code-container">
+            <pre>
+    <code class="javascript">
+        function greet() {
+            console.log("Hello, world!");
+        }
+        greet();
+    </code>
+</pre>
+        </div>
+    </main>
+    <script type="module">
+        import hljs from 'https://cdn.skypack.dev/highlight.js';
+
+        const codeBlocks = document.querySelectorAll('pre code');
+        codeBlocks.forEach((codeBlock) => {
+            hljs.highlightBlock(codeBlock);
+        });
+    </script>
+</body>
+
 </html>

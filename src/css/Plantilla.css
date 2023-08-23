@@ -16,30 +16,45 @@
 
 body {
     background: var(--bg-color-Dark);
+    color: white;
     font-family: 'Poppins', sans-serif;
 }
 
 header {
     border: 1px solid red;
     font-size: 80px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
 }
 
-#Emoji_Container {
-    border: 1px solid #f700ff;
-    border-radius: 5px;
-    margin: 0 auto;
-    display: grid;
-    place-content: center;
-    padding: 50px;
-    background: #3b003d;
-    font-size: 70px;
+#Image_Container {
+    display: flex;
+    padding: 120px;
+}
+#Image_Container img {
+    width: 160px;
 }
 
 #Title_Container {
+    font-size: 50px;
+    font-weight: 800;
     color: white;
-    font-weight: 600;
-    max-width: 200px;
+    max-width: 740px;
+}
+
+#Title_Container em {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.re-marked {
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+main {
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 990px;
 }

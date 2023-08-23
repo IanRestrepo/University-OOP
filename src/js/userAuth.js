@@ -5,6 +5,30 @@ class User {
     }
 }
 
+// navigation.js
+function goto(page) {
+    switch (page) {
+        case "ix":
+            window.location.href = "index.html";
+            break;
+        case "hm":
+            window.location.href = "home.html";
+            break;
+        case 'lg':
+            window.location.href = 'login.html'
+        case "pl":
+            window.location.href = 'plantilla.html'
+        case 'na':
+            window.location.href = 'noAuth.html'
+        default:
+            console.log("Página no reconocida");
+    }
+}
+
+// Habilitar el acceso a la función desde la consola de desarrolladores
+window.goto = goto;
+
+
 function registerUser() {
     const newUserName = document.getElementById('userNameInp');
     const newPassword = document.getElementById('passwordInp');

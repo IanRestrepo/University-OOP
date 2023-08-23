@@ -19,9 +19,9 @@ body {
 
 header {
     font-size: 12px;
-    display: grid;
-    place-content: center;
-    place-items: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
     padding: 20px;
 }
 
@@ -45,7 +45,8 @@ header {
 #img_container{
     color: white;
     display: flex;
-    justify-content: center;
+    padding: 120px;
+    justify-content: space-around;
 }
 
 #explicaton{

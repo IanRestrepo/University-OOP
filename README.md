@@ -16,7 +16,7 @@ La Aplicación Web EXPO tiene como finalidad proporcionar a los entusiastas de l
 
 - **Ian Yeray Restrepo Gallego (Diseño, Desarrollo & Lógica):** Ian lideró la creación de páginas clave, como el diseño y desarrollo de las mismas junto con su lógica, Su creatividad y habilidades técnicas se reflejan en cada detalle visual y funcional.
 
-- **Miguel Angel Ballesteros (Diseño Visual):** Miguel aportó su experiencia en diseño para crear una interfaz visualmente atractiva para la página de Home. Su trabajo contribuye a la identidad visual unificada de la aplicación.
+- **Miguel Angel Ballesteros (Diseño Visual):** Miguel aportó su experiencia en diseño para crear una interfaz visualmente atractiva. Su trabajo contribuye a la identidad visual unificada de la aplicación.
 
 ## Tecnologías Utilizadas
 

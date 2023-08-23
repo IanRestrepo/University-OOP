@@ -21,11 +21,11 @@ body {
 }
 
 header {
-    border: 1px solid red;
     font-size: 80px;
     display: flex;
-    justify-content: center; /* Centra horizontalmente el contenido */
-    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
 }
 
 #Image_Container {
@@ -57,4 +57,43 @@ main {
     line-height: 1.5;
     margin: 0 auto;
     max-width: 990px;
+}
+
+.code-container pre  code{
+    border-radius: 5px;
+    border-left: 12px solid #0f0f0f;
+    background: #0c0c0c;
+}
+
+.hash {
+    color: #0066FE;
+    border: 1px solid #0066FE;
+    background-color: #001F3D;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 12px;
+}
+
+footer {
+text-align: center;
+padding: 20px;
+}
+
+.ancord {
+    color: #0066FE;
+    text-decoration: none;
+}
+
+.button {
+    margin: 25px auto;
+    padding: 10px;
+    background-color: var(--main-color-fill);
+    border: 1px solid var(--main-color);
+    font-size: 25px;
+    font-weight: 600;
+    width: 335px;
+    border-radius: 5px;
+    color: #0066FE;
+    cursor: pointer;
+    display: grid;
 }

@@ -5,6 +5,7 @@ class User {
     }
 }
 
+
 // navigation.js
 function goto(page) {
     switch (page) {

@@ -28,5 +28,5 @@ La Aplicación Web EXPO se construyó utilizando:
 
 Estamos emocionados de presentarte la Aplicación Web EXPO, una plataforma que hace que el aprendizaje de la Programación Orientada a Objetos sea atractivo y accesible. Independientemente de tu nivel de experiencia en programación, EXPO te ofrece una oportunidad única para explorar y entender los conceptos esenciales de la POO de manera interactiva y envolvente.
 
-Para obtener más información y acceder a la aplicación, visita [Expo-Project](https://github.com/IanRestrepo/University-OOP/tree/master).
+Para obtener más información y acceder a la aplicación, visita [Expo-Project](university-oop.vercel.app).
 

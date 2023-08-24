@@ -135,3 +135,36 @@ padding: 20px;
     padding: 12px;
     text-align: center;
 }
+
+.image img {
+    display: grid;
+    margin:  auto;
+}
+
+.Specifications {
+    padding: 20px;
+}
+
+
+.Ejemplo .InputMovil {
+    padding: 20px;
+}
+
+.Ejemplo .InputMovil .EjemploInputs {
+    outline: none;
+    background-color: #001F3D;
+    padding: 10px;
+    font-size: 20px;
+    color: #ffff;
+    border: 1px solid #0066FE;
+    border-radius: 5px;
+}
+
+.Ejemplo .ParqueBtn {
+    width: 130px;
+}
+
+.ListOfCars {
+    padding: 20px;
+    border-left: 1px solid #0066FE;
+}

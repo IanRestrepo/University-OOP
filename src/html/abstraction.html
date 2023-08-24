@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/css/Plantilla.css">
-    <title>Encapsulación</title>
+    <title>Project-Expo | Abstracción</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.2.0/styles/atom-one-dark.min.css">
+    <link rel="shortcut icon" href="/src/media/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -72,125 +73,116 @@
         </div>
         
         <div class="Ejemplo ATM">
-
             <div id="ATM_Container">
-                <h3>CONCENSIONARIO CIAFVROLET</h3>
-            <div id="userInfo">
-                
-                <h4>Modelo del Auto: <span id="TitularName"></span></h4>
-                <h4>Marca del Auto: <span><small>CIAFVROLET 2026</small></span></h4>
-                <br>
-                <h4>TIPO MOTOR: <span class="Blue" id="ATMValue"></span></h4>
+                <h3>CONCESIONARIO CIAFVROLET</h3>
+                <div id="userInfo">
+                    <h4>Tipo De Vehiculo: <span id="TitularName"></span></h4>
+                    <h4>Marca del Vehiculo: <span><small id="BrandName">CIAFVROLET 2026</small></span></h4>
+                    <div class="Specifications">
+                        <h4>Especificaciones:</h4>
+                        <p id="Especificaciones"></p>
+                    </div>
+                    <br>
+                    <h4>TIPO MOTOR: <span class="Blue" id="ATMValue"></span></h4>
+                </div>
+                <div id="userOptions">
+                    <button class="atmButton" id="GenerarAuto" onclick="generarVehiculo('Auto')">Generar Auto</button>
+                    <button class="atmButton" id="GenerarMoto" onclick="generarVehiculo('Moto')">Generar Moto</button>
+                </div>
             </div>
-
-            <div id="userOptions">
-                <button class="atmButton" id="Depositar" onclick="depositar()">Depositar</button>
-                <button class="atmButton" id="Retirar" onclick="retirar()">Retirar</button>
+            <div class="image">
+                <img src="/src/media/carS.svg" alt="CreditCardd" width="50%">
             </div>
-        </div>
-        <div class="image">
-            <img src="/src/media/carS.svg" alt="CreditCardd" width="50%">
-        </div>
         </div>
 
         <h2><span class="hash">##</span> Su Sintaxis</h2>
         <br>
         <p>
-            la encapsulación es uno de los conceptos <span class="re-marked">fundamentales</span> en la programación orientada a objetos (POO) que se refiere a la idea de ocultar los detalles internos de una clase y proporcionar una interfaz controlada para interactuar con ella. Esto se logra a través del uso de modificadores de acceso y métodos para limitar el acceso directo a los atributos y comportamientos internos de un objeto. En muchos lenguajes de programación, como Java, C++ y Python, se implementa mediante la definición de clases y el uso de sus miembros públicos, privados y protegidos.
+            La abstracción en la programación orientada a objetos (POO) se implementa a través de la creación de clases y objetos que representan conceptos abstractos o entidades del mundo real. Aquí tienes una descripción de la sintaxis básica para implementar abstracción en POO:
         </p>
         <br>
-        <h3 style="color: rgb(255, 230, 0);">JavaScript</h3>
+        <h3>Definición de clases</h3>
+        <br>
+        <p>Una clase es una plantilla que define la estructura y el comportamiento de un objeto. Puede incluir atributos (propiedades) y métodos (funciones) relacionados. Aquí está la sintaxis básica para definir una clase:</p>
+        <br>
+        <h3 style="color: var(--main-color)">Python</h3>
         <div class="code-container" id="code-container">
             <pre>
-    <code class="javascript">
-        class MiClase {
-            constructor() {
-                // Atributo encapsulado
-                this._atributoEncapsulado = 0;
-            }
-        
-            // Método para obtener el atributo encapsulado
-            obtenerAtributo() {
-                return this._atributoEncapsulado;
-            }
-        
-            // Método para establecer el atributo encapsulado
-            establecerAtributo(nuevoValor) {
-                this._atributoEncapsulado = nuevoValor;
-            }
-        }
-        
-        // Crear una instancia de la clase
-        const instancia = new MiClase();
-        
-        // Acceder a los métodos públicos para interactuar con el atributo encapsulado
-        console.log(instancia.obtenerAtributo()); // Imprime 0
-        instancia.establecerAtributo(42);
-        console.log(instancia.obtenerAtributo()); // Imprime 42
+    <code class="Python">
+    class NombreDeLaClase:
+        def __init__(self, parametros):
+            # Constructor para inicializar atributos
+            self.atributo = valor
+
+        def metodo(self, parametros):
+            # Implementación del método
+            pass
         
     </code>
 </pre>
 
         </div>
-        <h3 style="color: #c90d00;">Java</h3>
+
+        <h3>Creación de objetos</h3>
+        <br>
+        <p>
+            Un objeto es una instancia de una clase. Se crea utilizando el constructor de la clase. Aquí está la sintaxis para crear un objeto:
+        </p>
+        <br>
+
+        <h3 style="color: var(--main-color)">Python</h3>
         <div class="code-container" id="code-container">
             <pre>
-    <code class="java">
-        public class MiClase {
-            // Atributos privados
-            private int atributoPrivado;
-        
-            // Constructor
-            public MiClase(int valor) {
-                this.atributoPrivado = valor;
-            }
-        
-            // Método público para acceder al atributo privado
-            public int getAtributoPrivado() {
-                return atributoPrivado;
-            }
-        
-            // Método público para modificar el atributo privado
-            public void setAtributoPrivado(int nuevoValor) {
-                this.atributoPrivado = nuevoValor;
-            }
-        }
-        
+    <code class="Python">
+        objeto = NombreDeLaClase(argumentos)
     </code>
 </pre>
 
         </div>
+
+        <h3>Atributos y Métodos:</h3>
+        <p>Los atributos son variables que almacenan datos relacionados con el objeto, mientras que los métodos son funciones que definen el comportamiento del objeto. Pueden ser públicos (accesibles desde fuera de la clase), protegidos (accesibles desde la clase y sus subclases) o privados (accesibles solo desde la misma clase).</p>
+        <br>
+
         <h3 style="color: var(--main-color);">Python</h3>
         <div class="code-container" id="code-container">
             <pre>
     <code class="python">
-    class MiClase:
-        def __init__(self):
-            # Atributo encapsulado
-            self._atributo_encapsulado = 0
-
-        # Método para obtener el atributo encapsulado
-        def obtener_atributo(self):
-            return self._atributo_encapsulado
-
-        # Método para establecer el atributo encapsulado
-        def establecer_atributo(self, nuevo_valor):
-            self._atributo_encapsulado = nuevo_valor
-
-        # Crear una instancia de la clase
-        instancia = MiClase()
-
-        # Acceder a los métodos públicos para interactuar con el atributo encapsulado
-        print(instancia.obtener_atributo())  # Imprime 0
-        instancia.establecer_atributo(42)
-        print(instancia.obtener_atributo())  # Imprime 42
-
+        class Persona:
+        def __init__(self, nombre, edad):
+            self.nombre = nombre  # Atributo público
+            self.__edad = edad    # Atributo privado
     
+        def obtener_edad(self):
+            return self.__edad
+    
+        def __metodo_privado(self):
+            pass
+
     </code>
 </pre>
 
         </div>
+        <h3>Herencia y Polimorfismo:</h3>
+        <p>La herencia permite crear nuevas clases basadas en clases existentes, heredando atributos y métodos. El polimorfismo permite que objetos de diferentes clases se comporten de manera similar a través de una interfaz común.</p>
+        <br>
+        <h3 style="color: var(--main-color);">Python</h3>
+        <div class="code-container" id="code-container">
+            <pre>
+    <code class="python">
+        class Estudiante(Persona):
+    def __init__(self, nombre, edad, matricula):
+        super().__init__(nombre, edad)
+        self.matricula = matricula
 
+    def obtener_info(self):
+        return f"Nombre: {self.nombre}, Edad: {self.obtener_edad()}, Matrícula: {self.matricula}"
+
+
+    </code>
+</pre>
+
+        </div>
         <button class="button" onclick="window.location.href = 'home.html'">Back To Home</button>
     </main>
 

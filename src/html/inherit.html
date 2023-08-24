@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/Plantilla.css">
+    <title>Project-Expo | Herencia</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.2.0/styles/atom-one-dark.min.css">
+    <link rel="shortcut icon" href="/src/media/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div id="Image_Container">
+            <img src="/src/media/Inheritance.png" alt="Template Image">
+        </div>
+        <div id="Title_Container">Programación Orientada a Objetos: <span class="re-marked" id="TitleMaker">Herencia</span></div>
+    </header>
+
+    <main>
+        <h1><span class="hash">#</span> ¿Que es la Herencia?</h1>
+        <br>
+
+        <p>
+            Esto permite organizar las clases en una jerarquía de generalización-especialización, donde las clases más generales se llaman superclases o clases base, y las más específicas se llaman subclases o clases derivadas. Por ejemplo, si tenemos una clase vehículo como superclase, podemos crear subclases como automóvil, motocicleta, bicicleta, etc., que heredan sus atributos y métodos comunes, y agregan otros propios.
+        </p>
+
+
+        <div class="code-container" id="code-container">
+            <pre>
+    <code class="javascript">
+        class Vehiculo {
+            constructor(placas) {
+              this.placas = placas;
+              this.ingresado = false;
+            }
+          
+            ingresar() {
+              if (!this.ingresado) {
+                this.ingresado = true;
+                console.log(`El vehículo con placas ${this.placas} ingresó al parqueadero.`);
+              } else {
+                console.log(`El vehículo con placas ${this.placas} ya está en el parqueadero.`);
+              }
+            }
+          
+            salir() {
+              if (this.ingresado) {
+                this.ingresado = false;
+                console.log(`El vehículo con placas ${this.placas} salió del parqueadero.`);
+              } else {
+                console.log(`El vehículo con placas ${this.placas} no está en el parqueadero.`);
+              }
+            }
+          }
+          
+          class Automovil extends Vehiculo {}
+          
+          const auto1 = new Automovil("ABC123");
+          const auto2 = new Automovil("XYZ789");
+          
+          auto1.ingresar();
+          auto2.ingresar();
+          auto1.salir();
+          auto2.salir();
+              
+    </code>
+</pre>
+        </div>
+        
+        <div class="Ejemplo ATM">
+            <div class="EjemploContainer">
+                <h3>PARQUEACIAF</h3>
+                <div class="InputMovil">
+                    <input type="text" name="PlacaAutoMovil" id="PlacaAutoMovil" placeholder="Placa Automovil" class="EjemploInputs">
+                </div>
+                <div id="userOptions">
+                    <button class="atmButton ParqueBtn" id="Depositar" onclick="depositar()">Ingresar</button>
+                    <button class="atmButton ParqueBtn" id="Retirar" onclick="retirar()">Retirar</button>
+                </div>
+            </div>
+            <div class="ListOfCars">
+
+            </div>
+        </div>
+
+        <h2><span class="hash">##</span> Su Sintaxis</h2>
+        <br>
+        <p>
+            La sintaxis de la herencia <span class="re-marked">puede</span> variar según el lenguaje de programación que estés utilizando. Sin embargo, los conceptos fundamentales son bastante similares en la mayoría de los lenguajes orientados a objetos.
+        </p>
+        <br>
+        <h3 style="color: rgb(255, 8, 0);">Java</h3>
+        <div class="code-container" id="code-container">
+            <pre>
+    <code class="java">
+        class ClasePadre {
+            // Atributos y métodos de la clase padre
+        }
+        
+        class ClaseHija extends ClasePadre {
+            // Atributos y métodos adicionales de la clase hija
+        }
+        
+    </code>
+</pre>
+
+        </div>
+        <h3 style="color: #006fc9;">Python</h3>
+        <div class="code-container" id="code-container">
+            <pre>
+    <code class="Python">
+        class ClasePadre:
+    # Atributos y métodos de la clase padre
+
+class ClaseHija(ClasePadre):
+    # Atributos y métodos adicionales de la clase hija
+
+    </code>
+</pre>
+
+        </div>
+
+        <button class="button" onclick="window.location.href = 'home.html'">Back To Home</button>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script type="module">
+        import hljs from 'https://cdn.skypack.dev/highlight.js';
+
+        const codeBlocks = document.querySelectorAll('pre code');
+        codeBlocks.forEach((codeBlock) => {
+            hljs.highlightBlock(codeBlock);
+        });
+    </script>
+
+    <script src="/src/js/greetinLogic.js"></script>
+    <script src="/src/js/parqueaciaflogic.js"></script>
+</body>
+
+</html>

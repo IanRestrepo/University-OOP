@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/Plantilla.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.2.0/styles/atom-one-dark.min.css">
+</head>
+
+<body>
+    <header>
+        <div id="Image_Container">
+            <img src="/src/media/Template.png" alt="Template Image">
+        </div>
+        <div id="Title_Container">Plantilla Programación Orientada a Objetos</div>
+    </header>
+
+    <main>
+        <h1><span class="hash">#</span> ¿Que es el polimorfismo?</h1>
+        <br>
+
+        <p>
+
+            es la capacidad de que un mismo objeto pueda comportarse de diferentes formas según el contexto en el que se encuentre. Esto se logra mediante la sobrecarga y la sobreescritura de métodos.
+
+        </p>
+
+
+        <div class="code-container" id="code-container">
+            <pre>
+    <code class="javascript">
+        class Animal {
+    hablar() {
+        console.log("Sonido desconocido");
+    }
+}
+
+class Perro extends Animal {
+    hablar() {
+        console.log("Woof!");
+    }
+}
+
+class Gato extends Animal {
+    hablar() {
+        console.log("Meow!");
+    }
+}
+
+class Vaca extends Animal {
+    hablar() {
+        console.log("Moo!");
+    }
+}
+
+function hacerHablar(animal) {
+    animal.hablar();
+}
+
+// Crear instancias de las clases derivadas
+const perro = new Perro();
+const gato = new Gato();
+const vaca = new Vaca();
+
+// Llamar al método haciendo uso del polimorfismo
+hacerHablar(perro); // Imprimirá "Woof!"
+hacerHablar(gato);  // Imprimirá "Meow!"
+hacerHablar(vaca);  // Imprimirá "Moo!"
+
+    </code>
+</pre>
+        </div>
+
+        <h2><span class="hash">##</span> Su Sintaxis</h2>
+        <br>
+        <p>
+            La sintaxis del polimorfismo puede variar según el lenguaje de programación que estés utilizando, pero el concepto general es que se trata de la capacidad de objetos de diferentes clases de ser tratados como si fueran objetos de la misma clase base. 
+        </p>
+
+
+        <div class="code-container" id="code-container">
+            <pre>
+    <code class="javascript">
+        class Forma {
+            calcularArea() {
+                return 0.0;
+            }
+        }
+        
+        class Circulo extends Forma {
+            constructor(radio) {
+                super();
+                this.radio = radio;
+            }
+        
+            calcularArea() {
+                return Math.PI * this.radio * this.radio;
+            }
+        }
+        
+        class Rectangulo extends Forma {
+            constructor(ancho, alto) {
+                super();
+                this.ancho = ancho;
+                this.alto = alto;
+            }
+        
+            calcularArea() {
+                return this.ancho * this.alto;
+            }
+        }
+        
+        // Crear instancias de las clases derivadas
+        const forma1 = new Circulo(5.0);
+        const forma2 = new Rectangulo(4.0, 6.0);
+        
+        // Llamar al método calcularArea() haciendo uso del polimorfismo
+        console.log("Área del círculo: " + forma1.calcularArea());
+        console.log("Área del rectángulo: " + forma2.calcularArea());
+        
+    </code>
+</pre>
+        </div>
+
+        <button class="button" onclick="window.location.href = '/src/html/home.html'">Back To Home</button>
+    </main>
+
+    <footer>
+    </footer>
+    <script type="module">
+        import hljs from 'https://cdn.skypack.dev/highlight.js';
+
+        const codeBlocks = document.querySelectorAll('pre code');
+        codeBlocks.forEach((codeBlock) => {
+            hljs.highlightBlock(codeBlock);
+        });
+    </script>
+</body>
+
+</html>

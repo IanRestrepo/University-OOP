@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/Plantilla.css">
+    <title>Encapsulación</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.2.0/styles/atom-one-dark.min.css">
+</head>
+
+<body>
+    <header>
+        <div id="Image_Container">
+            <img src="/src/media/Template.png" alt="Template Image">
+        </div>
+        <div id="Title_Container">Programación Orientada a Objetos <span class="re-marked" id="TitleMaker">Encapsulación</span></div>
+    </header>
+
+    <main>
+        <h1><span class="hash">#</span> ¿Que es la Encapsulación?</h1>
+        <br>
+
+        <p>
+            es el mecanismo que oculta el estado interno y la funcionalidad de un objeto, y solo permite el acceso a través de un conjunto de métodos públicos. Esto garantiza la integridad y seguridad de los datos, evitando que se puedan modificar o acceder de forma indebida. Por ejemplo, si tenemos un objeto cuenta bancaria, podemos encapsular sus atributos como saldo, número de cuenta, etc., y solo permitir operaciones como depositar, retirar, consultar saldo, etc., mediante métodos públicos.
+
+        </p>
+
+
+        <div class="code-container" id="code-container">
+            <pre>
+    <code class="javascript">
+        //Crea la clase con la que se crearán las cuentas bancarias.
+        class CuentaBancaria { 
+            constructor(titular, saldoInicial) {
+                this._titular = titular;
+                this._saldo = saldoInicial;
+            }
+
+            /*
+             Apartir de aca se crean las funciones que se usaran como Encapsulación tales como la Obtención del saldo,
+             el deposito de un saldo x,  el retiro de dinero o la obtención del titular de la cuenta bancaria
+             */
+        
+            obtenerSaldo() {
+                return this._saldo;
+            }
+        
+            depositar(monto) {
+                if (monto > 0) {
+                    this._saldo += monto;
+                    console.log(`Se depositaron ${monto} unidades. Saldo actual: ${this._saldo}`);
+                } else {
+                    console.log("El monto del depósito debe ser mayor que cero.");
+                }
+            }
+        
+            retirar(monto) {
+                if (monto > 0 && monto <= this._saldo) {
+                    this._saldo -= monto;
+                    console.log(`Se retiraron ${monto} unidades. Saldo actual: ${this._saldo}`);
+                } else {
+                    console.log("Monto inválido o saldo insuficiente para el retiro.");
+                }
+            }
+        
+            obtenerTitular() {
+                return this._titular;
+            }
+        }
+        
+        // Crear una instancia de CuentaBancaria
+        const cuenta = new CuentaBancaria("Nombre Del Titular", 1000000);
+        
+        
+    </code>
+</pre>
+        </div>
+        
+        <div class="Ejemplo ATM">
+            <h3>ATM BANCIAF</h3>
+            <div id="userInfo">
+                <h4>Nombre Del Titular: <span id="TitularName"></span></h4>
+                <h4>Número de Cuenta: <span><em>**********</em></span></h4>
+                <br>
+                <h4>Saldo Total: $<span class="Blue" id="ATMValue"></span></h4>
+            </div>
+
+            <div id="userOptions">
+                <button class="atmButton" id="Depositar" onclick="depositar()">Depositar</button>
+                <button class="atmButton" id="Retirar" onclick="retirar()">Retirar</button>
+            </div>
+        </div>
+
+        <h2><span class="hash">##</span> Su Sintaxis</h2>
+        <br>
+        <p>
+            la encapsulación es uno de los conceptos <span class="re-marked">fundamentales</span> en la programación orientada a objetos (POO) que se refiere a la idea de ocultar los detalles internos de una clase y proporcionar una interfaz controlada para interactuar con ella. Esto se logra a través del uso de modificadores de acceso y métodos para limitar el acceso directo a los atributos y comportamientos internos de un objeto. En muchos lenguajes de programación, como Java, C++ y Python, se implementa mediante la definición de clases y el uso de sus miembros públicos, privados y protegidos.
+        </p>
+        <br>
+        <h3 style="color: rgb(255, 230, 0);">JavaScript</h3>
+        <div class="code-container" id="code-container">
+            <pre>
+    <code class="javascript">
+        class MiClase {
+            constructor() {
+                // Atributo encapsulado
+                this._atributoEncapsulado = 0;
+            }
+        
+            // Método para obtener el atributo encapsulado
+            obtenerAtributo() {
+                return this._atributoEncapsulado;
+            }
+        
+            // Método para establecer el atributo encapsulado
+            establecerAtributo(nuevoValor) {
+                this._atributoEncapsulado = nuevoValor;
+            }
+        }
+        
+        // Crear una instancia de la clase
+        const instancia = new MiClase();
+        
+        // Acceder a los métodos públicos para interactuar con el atributo encapsulado
+        console.log(instancia.obtenerAtributo()); // Imprime 0
+        instancia.establecerAtributo(42);
+        console.log(instancia.obtenerAtributo()); // Imprime 42
+        
+    </code>
+</pre>
+
+        </div>
+        <h3 style="color: #c90d00;">Java</h3>
+        <div class="code-container" id="code-container">
+            <pre>
+    <code class="java">
+        public class MiClase {
+            // Atributos privados
+            private int atributoPrivado;
+        
+            // Constructor
+            public MiClase(int valor) {
+                this.atributoPrivado = valor;
+            }
+        
+            // Método público para acceder al atributo privado
+            public int getAtributoPrivado() {
+                return atributoPrivado;
+            }
+        
+            // Método público para modificar el atributo privado
+            public void setAtributoPrivado(int nuevoValor) {
+                this.atributoPrivado = nuevoValor;
+            }
+        }
+        
+    </code>
+</pre>
+
+        </div>
+        <h3 style="color: var(--main-color);">Python</h3>
+        <div class="code-container" id="code-container">
+            <pre>
+    <code class="python">
+    class MiClase:
+        def __init__(self):
+            # Atributo encapsulado
+            self._atributo_encapsulado = 0
+
+        # Método para obtener el atributo encapsulado
+        def obtener_atributo(self):
+            return self._atributo_encapsulado
+
+        # Método para establecer el atributo encapsulado
+        def establecer_atributo(self, nuevo_valor):
+            self._atributo_encapsulado = nuevo_valor
+
+        # Crear una instancia de la clase
+        instancia = MiClase()
+
+        # Acceder a los métodos públicos para interactuar con el atributo encapsulado
+        print(instancia.obtener_atributo())  # Imprime 0
+        instancia.establecer_atributo(42)
+        print(instancia.obtener_atributo())  # Imprime 42
+
+    
+    </code>
+</pre>
+
+        </div>
+
+        <button class="button" onclick="window.location.href = 'home.html'">Back To Home</button>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script type="module">
+        import hljs from 'https://cdn.skypack.dev/highlight.js';
+
+        const codeBlocks = document.querySelectorAll('pre code');
+        codeBlocks.forEach((codeBlock) => {
+            hljs.highlightBlock(codeBlock);
+        });
+    </script>
+
+    <script src="/src/js/greetinLogic.js"></script>
+    <script src="/src/js/atmLogic.js"></script>
+</body>
+
+</html>

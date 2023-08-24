@@ -7,10 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const greeting = getGreeting(loggedInUserName);
 
         greetingElement.innerHTML = `${greeting}, <span class="Blue">${loggedInUserName}</span>.`;
+
+        userNameToShowElement.innerHTML = `<span class="Blue">${loggedInUserName}</span>.`;
     }
 });
 
-function getGreeting(userName) {
+function getGreeting() {
     const now = new Date();
     const hour = now.getHours();
 

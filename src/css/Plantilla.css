@@ -50,7 +50,7 @@ header {
 
 .re-marked {
     color: var(--main-color);
-    font-weight: 500;
+    font-weight: 800;
 }
 
 main {
@@ -72,6 +72,11 @@ main {
     padding: 5px;
     border-radius: 5px;
     margin: 0 12px;
+}
+
+.Blue {
+    color: #0066FE;
+    padding: 0 5px;
 }
 
 footer {
@@ -96,4 +101,30 @@ padding: 20px;
     color: #0066FE;
     cursor: pointer;
     display: grid;
+}
+
+.Ejemplo {
+    background: #0f0f0f;
+    margin: 20px 0 60px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.Ejemplo #userInfo {
+    padding: 20px;
+}
+
+.Ejemplo #userOptions {
+    padding: 20px;
+}
+
+.Ejemplo .atmButton {
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    background-color: var(--main-color-fill);
+    color: var(--main-color);
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
 }

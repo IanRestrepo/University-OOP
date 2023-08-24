@@ -1,4 +1,4 @@
-var saldoInicial = 1000000
+var saldoInicial = 1854575;
 
 document.addEventListener('DOMContentLoaded', () => {
     const userNameToShowElement = document.getElementById('TitularName');
